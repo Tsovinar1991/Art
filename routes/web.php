@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gallery', function(){
+   return view('pages/gallery');
+});
+
+
+
+Route::get('/painters', function(){
+    return view('pages/painters');
+});
