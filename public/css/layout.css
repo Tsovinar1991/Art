@@ -289,7 +289,6 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#FE0000; border-color:#FE0000;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
-
 .imgover:hover::before{background:rgba(0,0,0,.55);}
 .imgover, .imgover:hover::after{color:#FFFFFF;}
 

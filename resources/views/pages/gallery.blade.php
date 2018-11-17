@@ -7,24 +7,51 @@
             <div class="content">
                 <div id="gallery">
                     <figure>
+                        <div id="gallery">
                         <header class="heading">Art Gallery</header>
-                        <ul class="nospace clear">
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/5.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/1.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                        </ul>
+                        <div class="group team">
+                            @foreach($data as $d)
+                            <figure class="one_quarter"><a class="imgover" href="{{url('show/' . $d->id)}}"><img src="/storage/pictures/{{$d->image}}"
+                                                                                               alt=""></a><figcaption>
+                                    <h6 class="heading">{{$d->title}}</h6>
+                                    <em>{{$d->description}}</em>
+                                    <footer>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                            @endforeach
+                            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
+                                <figcaption>
+                                    <h6 class="heading">B. Doe</h6>
+                                    <em>Ullamcorper aliquam</em>
+                                    <footer>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
+                                <figcaption>
+                                    <h6 class="heading">C. Doe</h6>
+                                    <em>Id dolor in est</em>
+                                    <footer>
+
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
+                                <figcaption>
+                                    <h6 class="heading">D. Doe</h6>
+                                    <em>Dignissim tempus</em>
+                                    <footer>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </div>
                         <figcaption>Gallery Description Goes Here</figcaption>
+                        </div>
                     </figure>
                 </div>
+
+
                 <nav class="pagination">
                     <ul>
                         <li><a href="#">&laquo; Previous</a></li>

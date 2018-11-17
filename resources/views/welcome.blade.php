@@ -253,8 +253,8 @@
 </div>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/jquery.backtotop.js')}}"></script>
-<script src="{{asset('js/jquery.mobilemenu.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
+{{--<script src="{{asset('js/jquery.backtotop.js')}}"></script>--}}
+{{--<script src="{{asset('js/jquery.mobilemenu.js')}}"></script>--}}
 </body>
 </html>

@@ -6,24 +6,131 @@
             <!-- main body -->
             <div class="content">
                 <div id="gallery">
-                    <figure>
-                        <header class="heading">Painters</header>
-                        <ul class="nospace clear">
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/5.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/1.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter first"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                            <li class="one_quarter"><a href="#"><img src="{{asset('images/6.jpg')}}" alt=""></a></li>
-                        </ul>
-                        <figcaption></figcaption>
-                    </figure>
+                    <header class="heading">Painters</header>
+                    <div class="group team">
+                        <figure class="one_quarter first"><a class="imgover" href="#"><img
+                                        src="{{asset('images/6.jpg')}}"
+                                        alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">A. Doe</h6>
+                                <em>Eu urna pretium</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">B. Doe</h6>
+                                <em>Ullamcorper aliquam</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">C. Doe</h6>
+                                <em>Id dolor in est</em>
+                                <footer>
+
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">D. Doe</h6>
+                                <em>Dignissim tempus</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="group team">
+                        <figure class="one_quarter first"><a class="imgover" href="#"><img
+                                        src="{{asset('images/6.jpg')}}"
+                                        alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">A. Doe</h6>
+                                <em>Eu urna pretium</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">B. Doe</h6>
+                                <em>Ullamcorper aliquam</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">C. Doe</h6>
+                                <em>Id dolor in est</em>
+                                <footer>
+
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">D. Doe</h6>
+                                <em>Dignissim tempus</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="group team">
+                        <figure class="one_quarter first"><a class="imgover" href="#"><img
+                                        src="{{asset('images/6.jpg')}}"
+                                        alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">A. Doe</h6>
+                                <em>Eu urna pretium</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">B. Doe</h6>
+                                <em>Ullamcorper aliquam</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">C. Doe</h6>
+                                <em>Id dolor in est</em>
+                                <footer>
+
+                                </footer>
+                            </figcaption>
+                        </figure>
+                        <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}"
+                                                                                     alt=""></a>
+                            <figcaption>
+                                <h6 class="heading">D. Doe</h6>
+                                <em>Dignissim tempus</em>
+                                <footer>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <figcaption>Gallery Description Goes Here</figcaption>
+
                 </div>
                 <nav class="pagination">
                     <ul>
