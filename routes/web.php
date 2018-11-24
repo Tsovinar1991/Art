@@ -16,7 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/gallery', 'PictureController@index');
+Route::get('/show/{id}', 'PictureController@show');
 
 Route::get('/painters', function(){
-    return view('pages/painters');
+    return view('Pictures/painters');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

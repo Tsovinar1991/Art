@@ -1,136 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="zxx" class="no-js">
 <head>
-    <title>Gallery</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="{{asset('css/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>@yield('title')</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{{asset('css/template/linearicons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('css/template/main.css')}}">
 </head>
-<body id="top">
-<div class="bgded overlay" style="background-image:url({{asset('images/4.jpg')}});">
-    <div class="wrapper row1">
-        <header id="header" class="hoc clear">
-            <div id="logo" class="fl_left">
-                <h1><a href="/">ShineArt</a></h1>
+<body>
+<header id="header">
+    <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+                <a href="/"><img src="img/logo.png" alt="" title="" /></a>
             </div>
-            <nav id="mainav" class="fl_right">
-                <ul class="clear">
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li class="active"><a class="drop" href="#">Pages</a>
-                        <ul>
-                            <li><a href="{{url('/gallery')}}">Gallery</a></li>
-                            <li><a href="{{url('/painters')}}">Painters</a></li>
-                            {{--<li><a href="sidebar-left.html">Sidebar Left</a></li>--}}
-                            {{--<li class="active"><a href="sidebar-right.html">Sidebar Right</a></li>--}}
-                            {{--<li><a href="basic-grid.html">Basic Grid</a></li>--}}
-                        </ul>
-                    </li>
-                    <li><a class="drop" href="#">Categories</a>
-                        <ul>
-                            <li><a href="">Paintings</a></li>
-                            <li><a href="">Photography</a></li>
-                            <li><a href="">Drawings</a></li>
-                            <li><a href="">Graphic</a></li>
-                            <li><a href="">Design</a></li>
-                        </ul>
-                    </li>
-                    {{--<li><a class="drop" href="#">Dropdown</a>--}}
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    {{--<li><a href="services.html">Services</a></li>--}}
+                    <li><a href="/gallery">Gallery</a></li>
+                    {{--<li><a href="price.html">Pricing</a></li>--}}
+                    {{--<li class="menu-has-children"><a href="">Blog</a>--}}
                         {{--<ul>--}}
-                            {{--<li><a href="#">Level 2</a></li>--}}
-                            {{--<li><a class="drop" href="#">Level 2 + Drop</a>--}}
-                                {{--<ul>--}}
-                                    {{--<li><a href="#">Level 3</a></li>--}}
-                                    {{--<li><a href="#">Level 3</a></li>--}}
-                                    {{--<li><a href="#">Level 3</a></li>--}}
-                                {{--</ul>--}}
-                            {{--</li>--}}
-                            {{--<li><a href="#">Level 2</a></li>--}}
+                            {{--<li><a href="blog-home.html">Blog Home</a></li>--}}
+                            {{--<li><a href="blog-single.html">Blog Single</a></li>--}}
                         {{--</ul>--}}
                     {{--</li>--}}
-                    {{--<li><a href="#">Link Text</a></li>--}}
-                    {{--<li><a href="#">Link Text</a></li>--}}
+                    {{--<li class="menu-has-children"><a href="">Pages</a>--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="elements.html">Elements</a></li>--}}
+                            {{--<li class="menu-has-children"><a href="">Level 2 </a>--}}
+                                {{--<ul>--}}
+                                    {{--<li><a href="#">Item One</a></li>--}}
+                                    {{--<li><a href="#">Item Two</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li><a href="contact.html">Contact</a></li>--}}
                 </ul>
-            </nav>
-        </header>
+            </nav><!-- #nav-menu-container -->
+        </div>
     </div>
-    <section id="breadcrumb" class="hoc clear">
-        <div class="">
-            <span style ='margin-right:40px;'><a href="">ABOUT</a></span>
-            <span ><a href="">CONTACT</a></span>
-        </div>
-        <!-- ################################################################################################ -->
-        {{--<ul>--}}
-            {{--<li><a href="#">Home</a></li>--}}
-            {{--<li><a href="#">Lorem</a></li>--}}
-            {{--<li><a href="#">Ipsum</a></li>--}}
-            {{--<li><a href="#">Dolor</a></li>--}}
-        {{--</ul>--}}
-        <!-- ################################################################################################ -->
+</header><!-- #header -->
+show
 
-    </section>
-</div>
+    @yield('content')
 
-@yield('content')
 
-<div class="wrapper row4">
-    <footer id="footer" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <div class="one_third first">
-            <h6 class="heading">Our Services</h6>
-            <p>We make it eazy to find beautiful art works.</p>
-            <p>We`ll organize everything for comfortable service.</p>
+
+<!-- start footer Area -->
+<footer class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>About Me</h4>
+                    <p>
+                        We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.
+                    </p>
+                    <p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Categories</h4>
+                    <p>Stay updated with our latest trends</p>
+                    <div class="" id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+                            <div class="input-group">
+                                {{--<input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="" type="email">--}}
+                                {{--<div class="input-group-btn">--}}
+                                    {{--<button class="btn btn-default" type="submit">--}}
+                                        {{--<span class="lnr lnr-arrow-right"></span>--}}
+                                    {{--</button>--}}
+                                {{--</div>--}}
+                                <div class="info"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                <div class="single-footer-widget">
+                    <h4>Contact Info</h4>
+                    <p>Let us be social</p>
+                    <div class="footer-social d-flex align-items-center">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="one_third">
-            <h6 class="heading">Intro</h6>
-            <nav>
-                <ul class="nospace">
-                    <li><a href="/"><i class="fa fa-lg fa-home"></i></a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Cookies</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                </ul>
-            </nav>
-            <ul class="faico clear">
-                <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-            </ul>
-        </div>
-        {{--<div class="one_quarter">--}}
-            {{--<h6 class="heading">Exebitions</h6>--}}
-            {{--<article>--}}
-                {{--<h2 class="nospace font-x1"><a href="#">Something</a></h2>--}}
-                {{--<time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>--}}
-            {{--</article>--}}
-        {{--</div>--}}
-        <div class="one_third">
-            <h6 class="heading">Categories</h6>
-            <ul class="nospace linklist">
-                <li><a href="#">Paintings</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Drawings</a></li>
-                <li><a href="#">Graphic</a></li>
-                <li><a href="#">Design</a></li>
-            </ul>
-        </div>
-    </footer>
-</div>
-<div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
-        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Art.loc</a></p>
     </div>
-</div>
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/jquery.backtotop.js')}}"></script>
-<script src="{{asset('js/jquery.mobilemenu.js')}}"></script>
+</footer>
+<!-- End footer Area -->
+
+<script src="{{asset('js/template/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/template/popper.min.js')}}"></script>
+<script src="{{asset('js/template/bootstrap.min.js')}}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="{{asset('js/template/easing.min.js')}}"></script>
+<script src="{{asset('js/template/hoverIntent.js')}}"></script>
+<script src="{{asset('js/template/superfish.min.js')}}"></script>
+<script src="{{asset('js/template/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('js/template/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('js/template/jquery.tabs.min.js')}}"></script>
+<script src="{{asset('js/template/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('js/template/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('js/template/waypoints.min.js')}}"></script>
+<script src="{{asset('js/template/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('js/template/simple-skillbar.js')}}"></script>
+<script src="{{asset('js/template/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/template/mail-script.js')}}"></script>
+<script src="{{asset('js/template/main.js')}}"></script>
 </body>
 </html>
+
+
+
+

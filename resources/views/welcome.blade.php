@@ -1,260 +1,524 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <title>Art</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="{{asset('css/layout.css')}}" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-<!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url({{asset('images/4.jpg')}});">
-    <div class="wrapper row1">
-        <header id="header" class="hoc clear">
-            <div id="logo" class="fl_left">
-                <h1><a href="">ShineArt</a></h1>
+@extends('layouts.app')
+
+@section('content')
+
+
+    <!-- start banner Area -->
+<section class="banner-area">
+    <div class="container">
+        <div class="row fullscreen align-items-center justify-content-between">
+            <div class="col-lg-6 col-md-6 banner-left">
+                <h6>This is me</h6>
+                <h1>Shine</h1>
+                <p>
+                    You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.
+                </p>
+                <a href="#" class="primary-btn text-uppercase">discover now</a>
             </div>
-            <nav id="mainav" class="fl_right">
-                <ul class="clear">
-                    <li class="active"><a href="{{url('/')}}">Home</a></li>
-                    <li><a class="drop" href="#">Pages</a>
-                        <ul>
-                            <li><a href="{{url('/gallery')}}">Gallery</a></li>
-                            <li><a href="{{url('/painters')}}">Painters</a></li>
-                            {{--<li><a href="pages/sidebar-left.html">Sidebar Left</a></li>--}}
-                            {{--<li><a href="pages/sidebar-right.html">Sidebar Right</a></li>--}}
-                            {{--<li><a href="pages/basic-grid.html">Basic Grid</a></li>--}}
-                        </ul>
-                    </li>
-
-                    <li><a class="drop" href="#">Categories</a>
-                        <ul>
-                            <li><a href="">Paintings</a></li>
-                            <li><a href="">Photography</a></li>
-                            <li><a href="">Drawings</a></li>
-                            <li><a href="">Graphic</a></li>
-                            <li><a href="">Design</a></li>
-                        </ul>
-                    </li>
-                    {{--<li><a class="drop" href="#">Dropdown</a>--}}
-                    {{--<ul>--}}
-                    {{--<li><a href="#">Level 2</a></li>--}}
-                    {{--<li><a class="drop" href="#">Level 2 + Drop</a>--}}
-                    {{--<ul>--}}
-                    {{--<li><a href="#">Level 3</a></li>--}}
-                    {{--<li><a href="#">Level 3</a></li>--}}
-                    {{--<li><a href="#">Level 3</a></li>--}}
-                    {{--</ul>--}}
-                    {{--</li>--}}
-                    {{--<li><a href="#">Level 2</a></li>--}}
-                    {{--</ul>--}}
-                    {{--</li>--}}
-                    {{--<li><a href="#">Link Text</a></li>--}}
-                    {{--<li><a href="#">Gallery</a></li>--}}
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <div id="pageintro" class="hoc clear">
-        <article>
-            <h3 class="heading">Original Art Works</h3>
-            <p>Shop millions of handmade and vintage items on the world’s most imaginative marketplace.</p>
-            {{--<p class="font-x1 uppercase bold">Felis vitae ultricies blandit</p>--}}
-            {{--<footer><a class="btn" href="#">About Us</a></footer>--}}
-        </article>
-    </div>
-</div>
-
-<div class="wrapper row2">
-    <section class="hoc container clear">
-        <div class="sectiontitle">
-            <h6 class="heading">Our works</h6>
-        </div>
-        <div class="group team">
-            <figure class="one_quarter first"><a class="imgover" href="#"><img src="{{asset('images/6.jpg')}}"
-                                                                               alt=""></a>
-                <figcaption>
-                    <h6 class="heading">A. Doe</h6>
-                    <em>Eu urna pretium</em>
-                    <footer>
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">B. Doe</h6>
-                    <em>Ullamcorper aliquam</em>
-                    <footer>
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">C. Doe</h6>
-                    <em>Id dolor in est</em>
-                    <footer>
-
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/2.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">D. Doe</h6>
-                    <em>Dignissim tempus</em>
-                    <footer>
-                    </footer>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="sectiontitle">
-            <div class="heading">
-                <a href="{{url('/gallery')}}" class="btn">More</a>
+            <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+                <img class="img-fluid" src="{{asset('images/6.jpg')}}" alt="">
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
+<!-- End banner Area -->
 
-
-<div class="wrapper row2">
-    <section class="hoc container clear">
-        <div class="sectiontitle">
-            <h6 class="heading">Our Painters</h6>
-        </div>
-        <div class="group team">
-            <figure class="one_quarter first"><a class="imgover" href="#"><img src="{{asset('images/3.jpg')}}"
-                                                                               alt=""></a>
-                <figcaption>
-                    <h6 class="heading">A. Doe</h6>
-                    <em>Eu urna pretium</em>
-                    <footer>
-                        <ul class="faico clear">
-                            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-                        </ul>
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/3.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">B. Doe</h6>
-                    <em>Ullamcorper aliquam</em>
-                    <footer>
-                        <ul class="faico clear">
-                            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-                        </ul>
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/3.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">C. Doe</h6>
-                    <em>Id dolor in est</em>
-                    <footer>
-                        <ul class="faico clear">
-                            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-                        </ul>
-                    </footer>
-                </figcaption>
-            </figure>
-            <figure class="one_quarter"><a class="imgover" href="#"><img src="{{asset('images/3.jpg')}}" alt=""></a>
-                <figcaption>
-                    <h6 class="heading">D. Doe</h6>
-                    <em>Dignissim tempus</em>
-                    <footer>
-                        <ul class="faico clear">
-                            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-                        </ul>
-                    </footer>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="sectiontitle">
-            <div class="heading">
-                <a href="{{url('/painters')}}" class="btn">More</a>
+<!-- Start home-about Area -->
+<section class="home-about-area pt-120">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6 col-md-6 home-about-left">
+                <img class="img-fluid" src="{{asset('images/7.jpg')}}" alt="">
+            </div>
+            <div class="col-lg-5 col-md-6 home-about-right">
+                <h6>About Me</h6>
+                <h1 class="text-uppercase">Personal Details</h1>
+                <p>
+                    Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+                <a href="#" class="primary-btn text-uppercase">View Full Details</a>
             </div>
         </div>
-    </section>
-</div>
-<div class="wrapper bgded overlay" style="background-image:url({{asset('images/2.jpg')}});">
-    <div class="hoc container testimonials clear">
-        <article><img src="{{asset('')}}" alt="">
-            <blockquote>Painting is poetry that is seen rather than felt, and poetry is painting that is felt rather
-                than seen.
-            </blockquote>
-            <h6 class="heading font-x1">Leonardo da Vinci</h6>
-        </article>
     </div>
-</div>
+</section>
+<!-- End home-about Area -->
 
-<div class="wrapper row4">
-    <footer id="footer" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <div class="one_third first">
-            <h6 class="heading">Our Services</h6>
-            <p>We make it eazy to find beautiful art works.</p>
-            <p>We`ll organize everything for comfortable service.</p>
+<!-- Start services Area -->
+<section class="services-area section-gap">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content  col-lg-7">
+                <div class="title text-center">
+                    <h1 class="mb-10">My Offered Services</h1>
+                    <p>At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected.</p>
+                </div>
+            </div>
         </div>
-        <div class="one_third">
-            <h6 class="heading">Intro</h6>
-            <nav>
-                <ul class="nospace">
-                    <li><a href="/"><i class="fa fa-lg fa-home"></i></a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Cookies</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                </ul>
-            </nav>
-            <ul class="faico clear">
-                <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-            </ul>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-pie-chart"></span>
+                    <a href="#"><h4>Web Design</h4></a>
+                    <p>
+                        “It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-laptop-phone"></span>
+                    <a href="#"><h4>Web Development</h4></a>
+                    <p>
+                        If you are an entrepreneur, you know that your success cannot depend on the opinions of others. Like the wind, opinions.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-camera"></span>
+                    <a href="#"><h4>Photography</h4></a>
+                    <p>
+                        Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-picture"></span>
+                    <a href="#"><h4>Clipping Path</h4></a>
+                    <p>
+                        Hypnosis quit smoking methods maintain caused quite a stir in the medical world over the last two decades. There is a lot of argument.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-tablet"></span>
+                    <a href="#"><h4>Apps Interface</h4></a>
+                    <p>
+                        Do you sometimes have the feeling that you’re running into the same obstacles over and over again? Many of my conflicts.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <span class="lnr lnr-rocket"></span>
+                    <a href="#"><h4>Graphic Design</h4></a>
+                    <p>
+                        You’ve heard the expression, “Just believe it and it will come.” Well, technically, that is true, however, ‘believing’ is not just thinking that.
+                    </p>
+                </div>
+            </div>
         </div>
-        {{--<div class="one_quarter">--}}
-            {{--<h6 class="heading">Exebitions</h6>--}}
-            {{--<article>--}}
-                {{--<h2 class="nospace font-x1"><a href="#">Something</a></h2>--}}
-                {{--<time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>--}}
-            {{--</article>--}}
+    </div>
+</section>
+<!-- End services Area -->
+
+<!-- Start fact Area -->
+{{--<section class="facts-area section-gap" id="facts-area">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-lg-3 col-md-6 single-fact">--}}
+                {{--<h1 class="counter">2536</h1>--}}
+                {{--<p>Projects Completed</p>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-fact">--}}
+                {{--<h1 class="counter">6784</h1>--}}
+                {{--<p>Happy Clients</p>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-fact">--}}
+                {{--<h1 class="counter">2239</h1>--}}
+                {{--<p>Cups of Coffee</p>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-fact">--}}
+                {{--<h1 class="counter">435</h1>--}}
+                {{--<p>Real Professionals</p>--}}
+            {{--</div>--}}
         {{--</div>--}}
-        <div class="one_third">
-            <h6 class="heading">Categories</h6>
-            <ul class="nospace linklist">
-                <li><a href="#">Paintings</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Drawings</a></li>
-                <li><a href="#">Graphic</a></li>
-                <li><a href="#">Design</a></li>
-            </ul>
+    {{--</div>--}}
+{{--</section>--}}
+<!-- end fact Area -->
+
+<!-- Start portfolio-area Area -->
+{{--<section class="portfolio-area section-gap" id="portfolio">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row d-flex justify-content-center">--}}
+            {{--<div class="menu-content pb-70 col-lg-8">--}}
+                {{--<div class="title text-center">--}}
+                    {{--<h1 class="mb-10">Our Latest Featured Projects</h1>--}}
+                    {{--<p>Who are in extremely love with eco friendly system.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+        {{--<div class="filters">--}}
+            {{--<ul>--}}
+                {{--<li class="active" data-filter="*">All</li>--}}
+                {{--<li data-filter=".vector">Vector</li>--}}
+                {{--<li data-filter=".raster">Raster</li>--}}
+                {{--<li data-filter=".ui">UI/UX</li>--}}
+                {{--<li data-filter=".printing">Printing</li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+
+        {{--<div class="filters-content">--}}
+            {{--<div class="row grid">--}}
+                {{--<div class="single-portfolio col-sm-4 all vector">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p1.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p1.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>2D Vinyl Design</h4>--}}
+                        {{--<div class="cat">vector</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-portfolio col-sm-4 all raster">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p2.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p2.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>2D Vinyl Design</h4>--}}
+                        {{--<div class="cat">vector</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-portfolio col-sm-4 all ui">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p3.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p3.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>Creative Poster Design</h4>--}}
+                        {{--<div class="cat">Agency</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-portfolio col-sm-4 all printing">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p4.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p4.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>Embosed Logo Design</h4>--}}
+                        {{--<div class="cat">Portal</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-portfolio col-sm-4 all vector">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p5.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p5.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>3D Helmet Design</h4>--}}
+                        {{--<div class="cat">vector</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-portfolio col-sm-4 all raster">--}}
+                    {{--<div class="relative">--}}
+                        {{--<div class="thumb">--}}
+                            {{--<div class="overlay overlay-bg"></div>--}}
+                            {{--<img class="image img-fluid" src="img/p6.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<a href="img/p6.jpg" class="img-pop-up">--}}
+                            {{--<div class="middle">--}}
+                                {{--<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="p-inner">--}}
+                        {{--<h4>2D Vinyl Design</h4>--}}
+                        {{--<div class="cat">raster</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+    {{--</div>--}}
+{{--</section>--}}
+<!-- End portfolio-area Area -->
+
+<!-- Start testimonial Area -->
+{{--<section class="testimonial-area section-gap">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row d-flex justify-content-center">--}}
+            {{--<div class="menu-content pb-70 col-lg-8">--}}
+                {{--<div class="title text-center">--}}
+                    {{--<h1 class="mb-10">Client’s Feedback About Me</h1>--}}
+                    {{--<p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="row">--}}
+            {{--<div class="active-testimonial">--}}
+                {{--<div class="single-testimonial item d-flex flex-row">--}}
+                    {{--<div class="thumb">--}}
+                        {{--<img class="img-fluid" src="img/elements/user1.png" alt="">--}}
+                    {{--</div>--}}
+                    {{--<div class="desc">--}}
+                        {{--<p>--}}
+                            {{--Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.--}}
+                        {{--</p>--}}
+                        {{--<h4>Harriet Maxwell</h4>--}}
+                        {{--<p>CEO at Google</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="single-testimonial item d-flex flex-row">--}}
+                    {{--<div class="thumb">--}}
+                        {{--<img class="img-fluid" src="img/elements/user2.png" alt="">--}}
+                    {{--</div>--}}
+                    {{--<div class="desc">--}}
+                        {{--<p>--}}
+                            {{--A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.--}}
+                        {{--</p>--}}
+                        {{--<h4>Carolyn Craig</h4>--}}
+                        {{--<p>CEO at Facebook</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</section>--}}
+<!-- End testimonial Area -->
+
+<!-- Start price Area -->
+{{--<section class="price-area section-gap">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row d-flex justify-content-center">--}}
+            {{--<div class="menu-content pb-70 col-lg-8">--}}
+                {{--<div class="title text-center">--}}
+                    {{--<h1 class="mb-10">Choose Your Plan</h1>--}}
+                    {{--<p>When someone does something that they know that they shouldn’t do, did they.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-lg-3 col-md-6 single-price">--}}
+                {{--<div class="top-part">--}}
+                    {{--<h1 class="package-no">01</h1>--}}
+                    {{--<h4>Economy</h4>--}}
+                    {{--<p class="mt-10">For the individuals</p>--}}
+                {{--</div>--}}
+                {{--<div class="package-list">--}}
+                    {{--<ul>--}}
+                        {{--<li>Secure Online Transfer</li>--}}
+                        {{--<li>Unlimited Styles for interface</li>--}}
+                        {{--<li>Reliable Customer Service</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<div class="bottom-part">--}}
+                    {{--<h1>£199.00</h1>--}}
+                    {{--<a class="price-btn text-uppercase" href="#">Buy Now</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-price">--}}
+                {{--<div class="top-part">--}}
+                    {{--<h1 class="package-no">02</h1>--}}
+                    {{--<h4>Business</h4>--}}
+                    {{--<p class="mt-10">For the individuals</p>--}}
+                {{--</div>--}}
+                {{--<div class="package-list">--}}
+                    {{--<ul>--}}
+                        {{--<li>Secure Online Transfer</li>--}}
+                        {{--<li>Unlimited Styles for interface</li>--}}
+                        {{--<li>Reliable Customer Service</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<div class="bottom-part">--}}
+                    {{--<h1>£299.00</h1>--}}
+                    {{--<a class="price-btn text-uppercase" href="#">Buy Now</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-price">--}}
+                {{--<div class="top-part">--}}
+                    {{--<h1 class="package-no">03</h1>--}}
+                    {{--<h4>Premium</h4>--}}
+                    {{--<p class="mt-10">For the individuals</p>--}}
+                {{--</div>--}}
+                {{--<div class="package-list">--}}
+                    {{--<ul>--}}
+                        {{--<li>Secure Online Transfer</li>--}}
+                        {{--<li>Unlimited Styles for interface</li>--}}
+                        {{--<li>Reliable Customer Service</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<div class="bottom-part">--}}
+                    {{--<h1>£399.00</h1>--}}
+                    {{--<a class="price-btn text-uppercase" href="#">Buy Now</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-price">--}}
+                {{--<div class="top-part">--}}
+                    {{--<h1 class="package-no">04</h1>--}}
+                    {{--<h4>Exclusive</h4>--}}
+                    {{--<p class="mt-10">For the individuals</p>--}}
+                {{--</div>--}}
+                {{--<div class="package-list">--}}
+                    {{--<ul>--}}
+                        {{--<li>Secure Online Transfer</li>--}}
+                        {{--<li>Unlimited Styles for interface</li>--}}
+                        {{--<li>Reliable Customer Service</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<div class="bottom-part">--}}
+                    {{--<h1>£499.00</h1>--}}
+                    {{--<a class="price-btn text-uppercase" href="#">Buy Now</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</section>--}}
+<!-- End price Area -->
+
+<!-- Start recent-blog Area -->
+<section class="recent-blog-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 pb-30 header-text">
+                <h1>Latest works from our Gallery</h1>
+                <p>
+                    You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving and expanding the business
+                </p>
+            </div>
         </div>
-    </footer>
-</div>
-<div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
-        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Art.loc</a></p>
+        <div class="row">
+            <div class="single-recent-blog col-lg-4 col-md-4">
+                <div class="thumb">
+                    <img class="f-img img-fluid mx-auto" src="{{asset('images/b1.jpg')}}" alt="">
+                </div>
+                <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <img class="img-fluid" src="" alt="">
+                        <a href="#"><span>Mark Wiens</span></a>
+                    </div>
+                    <div class="meta">
+                        13th Dec
+                        <span class="lnr lnr-heart"></span> 15
+                        <span class="lnr lnr-bubble"></span> 04
+                    </div>
+                </div>
+                <a href="#">
+                    <h4>Break Through Self Doubt
+                        And Fear</h4>
+                </a>
+                <p>
+                    Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.
+                </p>
+            </div>
+            <div class="single-recent-blog col-lg-4 col-md-4">
+                <div class="thumb">
+                    <img class="f-img img-fluid mx-auto" src="{{asset('images/b2.jpg')}}" alt="">
+                </div>
+                <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <img class="img-fluid" src="img/user.png" alt="">
+                        <a href="#"><span>Mark Wiens</span></a>
+                    </div>
+                    <div class="meta">
+                        13th Dec
+                        <span class="lnr lnr-heart"></span> 15
+                        <span class="lnr lnr-bubble"></span> 04
+                    </div>
+                </div>
+                <a href="#">
+                    <h4>Portable Fashion for
+                        young women</h4>
+                </a>
+                <p>
+                    You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving.
+                </p>
+            </div>
+            <div class="single-recent-blog col-lg-4 col-md-4">
+                <div class="thumb">
+                    <img class="f-img img-fluid mx-auto" src="{{asset('images/b3.jpg')}}" alt="">
+                </div>
+                <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <img class="img-fluid" src="img/user.png" alt="">
+                        <a href="#"><span>Mark Wiens</span></a>
+                    </div>
+                    <div class="meta">
+                        13th Dec
+                        <span class="lnr lnr-heart"></span> 15
+                        <span class="lnr lnr-bubble"></span> 04
+                    </div>
+                </div>
+                <a href="#">
+                    <h4>Do Dreams Serve As
+                        A Premonition</h4>
+                </a>
+                <p>
+                    So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.
+                </p>
+            </div>
+
+
+        </div>
     </div>
-</div>
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="{{asset('js/app.js')}}"></script>
-{{--<script src="{{asset('js/jquery.backtotop.js')}}"></script>--}}
-{{--<script src="{{asset('js/jquery.mobilemenu.js')}}"></script>--}}
-</body>
-</html>
+</section>
+<!-- end recent-blog Area -->
+
+<!-- Start brands Area -->
+<section class="brands-area">
+    <div class="container">
+        <div class="brand-wrap">
+            <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
+                </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
+                </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
+                </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
+                </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End brands Area -->
+
+
+
+@endsection

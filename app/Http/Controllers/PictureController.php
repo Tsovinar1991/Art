@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Picture;
+use Illuminate\Support\Facades\Storage;
+
 
 class PictureController extends Controller
 {
@@ -15,7 +17,7 @@ class PictureController extends Controller
     public function index()
     {
        $data = Picture::orderby('id', 'desc')->get();
-       return view('pages.gallery')->with('data', $data);
+       return view('Pictures.gallery')->with('data', $data);
     }
 
     /**
@@ -47,7 +49,8 @@ class PictureController extends Controller
      */
     public function show($id)
     {
-        //
+      $picture = Picture::findOrFail($id);
+       return view('pictures/show')->with('p', $picture);
     }
 
     /**
