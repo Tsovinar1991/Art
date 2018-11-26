@@ -1,9 +1,10 @@
-
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class AddPictureTable extends Migration
+
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +13,13 @@ class AddPictureTable extends Migration
      */
     public function up()
     {
-        Schema::create('pictures', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('description');
-            $table->string('image');
-            $table->string('autor')->default('Shine');
-            $table->string('price');
-            $table->unsignedInteger('category_id');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -30,6 +27,6 @@ class AddPictureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pictures');
+        Schema::dropIfExists('categories');
     }
 }

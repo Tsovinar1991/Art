@@ -4474,12 +4474,23 @@ dl.accordion.time-line:before {
   }
 }
 
+.background_about{
+  background-image: url("../../images/background.jpg");
+  background-size: cover;
+}
+
 .footer-bottom .lnr, .footer-bottom a {
   color: #8490ff;
 }
 
 .footer-text a {
   color: #8490ff;
+}
+
+.autor{
+  font-style: italic;
+  color: #550026;
+  text-transform:uppercase;
 }
 
 /*-------- end footer Area -------------*/

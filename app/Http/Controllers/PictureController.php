@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Picture;
+use App\Category;
 use Illuminate\Support\Facades\Storage;
-
-
 class PictureController extends Controller
 {
     /**
@@ -16,10 +13,11 @@ class PictureController extends Controller
      */
     public function index()
     {
-       $data = Picture::orderby('id', 'desc')->get();
-       return view('Pictures.gallery')->with('data', $data);
-    }
 
+        $category = Category::all();
+        $data = Picture::orderby('id', 'desc')->paginate('9');
+        return view('Pictures.gallery')->with(['data'=> $data, 'categories'=>$category]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +27,6 @@ class PictureController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -40,7 +37,6 @@ class PictureController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -49,10 +45,10 @@ class PictureController extends Controller
      */
     public function show($id)
     {
-      $picture = Picture::findOrFail($id);
-       return view('pictures/show')->with('p', $picture);
+        $category = Category::all();
+        $picture = Picture::findOrFail($id);
+        return view('pictures/show')->with(['p'=> $picture, 'categories'=>$category]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -63,7 +59,6 @@ class PictureController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -75,7 +70,6 @@ class PictureController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

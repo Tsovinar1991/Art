@@ -11,16 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+Route::get('/', 'MainController@welcome');
 Route::get('/gallery', 'PictureController@index');
 Route::get('/show/{id}', 'PictureController@show');
-
 Route::get('/painters', function(){
     return view('Pictures/painters');
 });
+
+Route::get('/reglog', function () {   ///this is just for need
+    return view('reglog');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
