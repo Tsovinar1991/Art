@@ -16,9 +16,11 @@
 Route::get('/', 'MainController@welcome');
 Route::get('/gallery', 'PictureController@index');
 Route::get('/show/{id}', 'PictureController@show');
-Route::get('/painters', function(){
-    return view('Pictures/painters');
-});
+//Route::get('/painters', function(){
+//    return view('Pictures/painters');
+//});
+
+Route::any('/category/{id}', 'MainController@category');
 
 Route::get('/reglog', function () {   ///this is just for need
     return view('reglog');
@@ -28,5 +30,6 @@ Route::get('/reglog', function () {   ///this is just for need
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 

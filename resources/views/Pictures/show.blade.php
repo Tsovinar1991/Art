@@ -35,9 +35,9 @@
             </div>
             <div class="filters">
                 <ul>
-                    <li class="active" data-filter="*">All</li>
+                    <a href="/gallery"><li class="active" data-filter="*">All</li></a>
                     @foreach($categories as $category)
-                        <li data-filter=".ui">{{$category->title}}</li>
+                        <li data-filter=".ui"><a href="/category/{{$category->id}}">{{$category->title}}</a></li>
                     @endforeach
                 </ul>
             </div>

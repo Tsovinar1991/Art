@@ -18,6 +18,8 @@ class PictureController extends Controller
         $data = Picture::orderby('id', 'desc')->paginate('9');
         return view('Pictures.gallery')->with(['data'=> $data, 'categories'=>$category]);
     }
+
+
     /**
      * Show the form for creating a new resource.
      *

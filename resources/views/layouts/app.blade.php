@@ -100,7 +100,7 @@
                         <div class="" id="mc_embed_signup">
                                 <div class=" single-footer-widget">
                                     @foreach(App\Category::all() as $category)
-                                        <div><a href="">{{$category->title}}</a></div>
+                                        <div><a href="/category/{{$category->id}}">{{$category->title}}</a></div>
                                     @endforeach
                                     {{--<input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="" type="email">--}}
                                     {{--<div class="input-group-btn">--}}

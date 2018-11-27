@@ -8,7 +8,7 @@
 
     <!-- start banner Area -->
     <section class="about-banner  background_about">
-        <div class="container ">
+        <div class="container " >
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="about-content col-lg-12">
                     <h1 class="text-white">
@@ -36,47 +36,39 @@
 
             <div class="filters">
                 <ul>
-                    <a href="{{url('/gallery')}}">
-                        <li class="" data-filter="*">All</li>
-                    </a>
+                    <li class="active" data-filter="*">All</li>
                     @foreach($categories as $category)
-                        <li data-filter=".ui"><a href="/category/{{$category->id}}">{{$category->title}}</a></li>
+                        <li data-filter=".ui">{{$category->title}}</li>
                     @endforeach
                 </ul>
             </div>
 
-            @if(count($data)>0)
-                <div class="row">
-                    @foreach($data as $d)
-                        <div class="single-recent-blog col-lg-4 col-md-4">
-                            <a href="#">
-                                <h4>{{$d->title}}</h4>
-                            </a>
-                            <div class="thumb">
-                                <a href="/show/{{$d->id}}"><img class="f-img image img-fluid rounded  mx-auto "
-                                                                src="{{asset('images/'.$d->image)}}" alt=""></a>
-                            </div>
-                            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-                                <div>
-                                    {{--<img class="img-fluid" src="" alt="">--}}
-                                    Autor:<span class="autor">{{$d->autor}}</span>
-                                    <div class="lnr lnr-heart">Like</div>
-                                </div>
-                                {{--<div class="meta">--}}
-                                {{--13th Dec--}}
-                                {{--<span class="lnr lnr-heart"></span> 15--}}
-                                {{--<span class="lnr lnr-bubble"></span> 04--}}
-                                {{--</div>--}}
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @else
-                <div class="d-flex justify-content-between align-items-center">
-                    <h3> Sorry there are no pictures.</h3>
-                </div>
-            @endif
 
+            <div class="row">
+                @foreach($data as $d)
+                    <div class="single-recent-blog col-lg-4 col-md-4">
+                        <a href="#">
+                            <h4>{{$d->title}}</h4>
+                        </a>
+                        <div class="thumb">
+                            <a href="/show/{{$d->id}}"><img class="f-img image img-fluid rounded  mx-auto "
+                                                            src="{{asset('images/'.$d->image)}}" alt=""></a>
+                        </div>
+                        <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                            <div>
+                                {{--<img class="img-fluid" src="" alt="">--}}
+                                Autor:<span class="autor">{{$d->autor}}</span>
+                                <div class="lnr lnr-heart">Like</div>
+                            </div>
+                            {{--<div class="meta">--}}
+                            {{--13th Dec--}}
+                            {{--<span class="lnr lnr-heart"></span> 15--}}
+                            {{--<span class="lnr lnr-bubble"></span> 04--}}
+                            {{--</div>--}}
+                        </div>
+                    </div>
+                @endforeach
+            </div>
             {!! $data->links()!!}
 
 
