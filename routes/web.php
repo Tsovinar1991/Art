@@ -28,7 +28,7 @@ Route::get('/reglog', function () {   ///this is just for need
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 
 
 
