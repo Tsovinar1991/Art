@@ -52,27 +52,26 @@
                             <a href="#">
                                 <h4>{{$d->title}}</h4>
                             </a>
+
                             <div class="thumb">
-                                <a href="/show/{{$d->id}}"><img class="f-img image img-fluid rounded  mx-auto "
-                                                                src="{{asset('images/'.$d->image)}}" alt=""></a>
+                                <a href="/show/{{$d->id}}"><img class="f-img img-fluid mx-auto" src="{{asset('images/'.$d->image)}}" alt=""></a>
                             </div>
                             <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
                                 <div>
-                                    {{--<img class="img-fluid" src="" alt="">--}}
-                                    Autor:<span class="autor">{{$d->autor}}</span>
-                                    <div class="lnr lnr-heart">Like</div>
+                                    <img class="img-fluid" src="" alt="">
+                                    <a href="#"><span>{{$d->autor}}</span></a>
                                 </div>
-                                {{--<div class="meta">--}}
-                                {{--13th Dec--}}
-                                {{--<span class="lnr lnr-heart"></span> 15--}}
-                                {{--<span class="lnr lnr-bubble"></span> 04--}}
-                                {{--</div>--}}
+                                <div class="meta">
+                                    <span class="lnr lnr-heart"></span>
+                                    <span class="lnr lnr-bubble"></span>
+                                </div>
                             </div>
+                            {{--<p>{{$d->description}}</p>--}}
                         </div>
                     @endforeach
                 </div>
             @else
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="">
                     <h3> Sorry there are no pictures.</h3>
                 </div>
             @endif

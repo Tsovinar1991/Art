@@ -18,6 +18,7 @@ class AddPictureTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->string('autor')->default('Shine');
+            $table->string('materials');
             $table->string('price');
             $table->unsignedInteger('category_id');
             $table->timestamps();

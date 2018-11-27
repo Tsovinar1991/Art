@@ -65,6 +65,10 @@ $black			: #222;
   font-weight: 300;
 }
 
+#logo img{
+  width:60px;
+}
+
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #777777;
@@ -2067,6 +2071,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 673px) {
   #logo {
     margin-left: 20px;
+
   }
 }
 
@@ -2983,7 +2988,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-recent-blog:hover {
-  cursor: pointer;
+
 }
 
 .single-recent-blog:hover h4 {

@@ -58,7 +58,7 @@
                             <div>
                                 {{--<img class="img-fluid" src="" alt="">--}}
                                 Autor:<span class="autor">{{$d->autor}}</span>
-                                <div class="lnr lnr-heart">Like</div>
+                                <div class="lnr lnr-heart"></div>
                             </div>
                             {{--<div class="meta">--}}
                             {{--13th Dec--}}

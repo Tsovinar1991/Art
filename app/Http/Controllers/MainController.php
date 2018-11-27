@@ -10,15 +10,11 @@ class MainController extends Controller
 {
     public function welcome()
     {
-        return View('welcome');
+        $picture = Picture::inRandomOrder()->take(3)->get();
+        return View('welcome')->with('picture', $picture);
 
     }
 
-    public function category($id)
-    {
-        $category = Category::all();
-        $data = Picture::orderby('id', 'desc')->where('category_id', $id)->paginate('9');
-        return view('Pictures.gallery')->with(['data' => $data, 'categories' => $category]);
-    }
+
 
 }
