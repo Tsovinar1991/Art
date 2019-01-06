@@ -410,7 +410,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 pb-30 header-text">
-                    <h1>Latest works from my Gallery</h1>
+                    <h1>{{ __('lang.msg') }}</h1>
                     <p>
                         You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving and expanding the business
                     </p>

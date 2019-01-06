@@ -12,23 +12,21 @@
 */
 
 
+Route::get('/test', 'TestController@index');
+Route::get('/ajax', 'TestController@ajax');
+Route::post('/ajaxpost', 'TestController@ajaxpost');
 
-Route::get('/', 'MainController@welcome');
+
+
+Route::get('/{local?}', 'MainController@welcome');
 Route::get('/gallery', 'PictureController@index');
 Route::get('/show/{id}', 'PictureController@show');
 Route::any('/category/{id}', 'PictureController@category');
-
-
-
-
-Route::get('/reglog', function () {   ///this is just for need
-    return view('reglog');
-});
-
-
 Auth::routes();
+Route::get('/admin', 'HomeController@index');
 
-Route::get('/admin', 'HomeController@index')->name('home');
+
+
 
 
 

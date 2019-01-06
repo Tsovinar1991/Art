@@ -4,7 +4,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    {{--<link rel="shortcut icon" href="img/fav.png">--}}
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -131,6 +131,7 @@
 @show
 <!-- End footer Area -->
 
+
 <script src="{{asset('js/template/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/template/popper.min.js')}}"></script>
 <script src="{{asset('js/template/bootstrap.min.js')}}"></script>
@@ -149,5 +150,50 @@
 <script src="{{asset('js/template/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/template/mail-script.js')}}"></script>
 <script src="{{asset('js/template/main.js')}}"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<script>
+    jQuery(document).ready(function(){
+
+        jQuery('#ajaxSubmit').click(function(e){
+            // alert('test');
+            e.preventDefault();
+            jQuery.ajax({
+                url: "{{ url('/ajax') }}",
+                method: 'get',
+                data: {},
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                },
+                success: function(result){
+                    // console.log(result);
+                    $("#testh").html(result);
+                }});
+        });
+
+        jQuery('#postclick').click(function(e){
+            e.preventDefault();
+            jQuery.ajax({
+                url: "{{ url('/ajaxpost') }}",
+                method: 'post',
+                dataType:'json',
+                data: {  f: jQuery('#f').val(),
+                         l: jQuery('#l').val()},
+                headers:
+                    {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                success: function(result){
+
+
+                    $.each(result, function(index, value) {
+                        $("#cont").append('<h2 class="testh">' + value +'</h2>');
+                    });
+
+
+
+                }});
+        });
+    });
+</script>
 </body>
 </html>
