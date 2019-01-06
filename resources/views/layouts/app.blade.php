@@ -43,7 +43,7 @@
                         <li><a href="/">Home</a></li>
                         {{--<li><a href="">Blog</a></li>--}}
                         {{--<li><a href="services.html">Services</a></li>--}}
-                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="{{url('/gallery')}}">Gallery</a></li>
                         {{--<li><a href="price.html">Pricing</a></li>--}}
                         {{--<li class="menu-has-children"><a href="">Blog</a>--}}
                         {{--<ul>--}}

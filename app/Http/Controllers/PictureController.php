@@ -13,7 +13,6 @@ class PictureController extends Controller
      */
     public function index()
     {
-
         $category = Category::all();
         $data = Picture::orderby('id', 'desc')->paginate('9');
         return view('Pictures.gallery')->with(['data'=> $data, 'categories'=>$category]);

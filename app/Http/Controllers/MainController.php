@@ -10,11 +10,6 @@ class MainController extends Controller
 {
 
     public function __construct(Request $request,$local=null) {
-        //set’s application’s locale
-        app()->setLocale($local);
-
-        //Gets the translated message and displays it
-//        echo trans('lang.msg');
 
     }
 
