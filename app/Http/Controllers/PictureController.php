@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use App\Picture;
 use App\Category;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Resources\Picture as PictureResource;
+
 class PictureController extends Controller
 {
     /**
@@ -13,6 +15,8 @@ class PictureController extends Controller
      */
     public function index()
     {
+
+
         $category = Category::all();
         $data = Picture::orderby('id', 'desc')->paginate('9');
         return view('Pictures.gallery')->with(['data'=> $data, 'categories'=>$category]);

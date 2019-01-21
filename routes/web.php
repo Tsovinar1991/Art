@@ -11,6 +11,7 @@
 |
 */
 
+
 //just ajax tests
 Route::get('/test', 'TestController@index');
 Route::get('/ajax', 'TestController@ajax');
@@ -25,9 +26,11 @@ Route::get('/gallery', 'PictureController@index');
 Route::get('/show/{id}', 'PictureController@show');
 Route::any('/category/{id}', 'PictureController@category');
 Auth::routes();
-Route::get('/admin', 'HomeController@index');
 
-
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
+{
+    Route::get('/dashboard', 'HomeController@index');
+});
 
 
 
